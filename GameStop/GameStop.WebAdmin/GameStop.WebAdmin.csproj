@@ -143,7 +143,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CategoriasController.cs" />
+    <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrdenController.cs" />
+    <Compile Include="Controllers\OrdenesDetalleController.cs" />
+    <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -162,6 +167,25 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Productos\Index.cshtml" />
+    <Content Include="Views\Categorias\Index.cshtml" />
+    <Content Include="Views\Orden\Index.cshtml" />
+    <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Views\Productos\Crear.cshtml" />
+    <Content Include="Views\Categorias\Crear.cshtml" />
+    <Content Include="Views\Orden\Crear.cshtml" />
+    <Content Include="Views\Clientes\Crear.cshtml" />
+    <Content Include="Views\Clientes\Editar.cshtml" />
+    <Content Include="Views\Categorias\Editar.cshtml" />
+    <Content Include="Views\Orden\Editar.cshtml" />
+    <Content Include="Views\Productos\Editar.cshtml" />
+    <Content Include="Views\Productos\Detalle.cshtml" />
+    <Content Include="Views\Clientes\Detalle.cshtml" />
+    <Content Include="Views\Categorias\Detalle.cshtml" />
+    <Content Include="Views\Orden\Detalle.cshtml" />
+    <Content Include="Views\Productos\Eliminar.cshtml" />
+    <Content Include="Views\Clientes\Eliminar.cshtml" />
+    <Content Include="Views\Categorias\Eliminar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -171,7 +195,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Imagenes\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\OrdenesDetalle\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GameStop.BL\GameStop.BL.csproj">
