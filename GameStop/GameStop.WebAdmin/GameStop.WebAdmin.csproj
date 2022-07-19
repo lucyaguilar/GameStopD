@@ -147,7 +147,7 @@
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrdenController.cs" />
-    <Compile Include="Controllers\OrdenesDetalleController.cs" />
+    <Compile Include="Controllers\OrdenDetalleController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -186,6 +186,8 @@
     <Content Include="Views\Productos\Eliminar.cshtml" />
     <Content Include="Views\Clientes\Eliminar.cshtml" />
     <Content Include="Views\Categorias\Eliminar.cshtml" />
+    <Content Include="Views\OrdenDetalle\Index.cshtml" />
+    <Content Include="Views\OrdenDetalle\Crear.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

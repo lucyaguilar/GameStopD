@@ -3,5 +3,138 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Bienvenido a GameStop</h2>
+<section class="story-area left-text center-sm-text">
+    <div class="container">
+        <div class="heading"><h3>Las mejores Marcas</h3></div>
+        <div class="row">
+            <div class="col-lg-3 col-md-4  col-sm-6 ">
+                <div class="center-text mb-30">
+                    <div class="ïmg-200x mlr-auto pos-relative">
+                        <h6 class="ribbon-cont color-white"> <div class="ribbon primary"></div></h6>
+                        <img src="~/images/10-104138_blue-playstation-logo-png-playstation-logo-no-background.png" alt="">
+                    </div>
+                    <h5 class="mt-20">Play Station</h5>
+
+                </div><!--text-center-->
+            </div><!-- col-md-3 -->
+            <div class="col-lg-3 col-md-4  col-sm-6 ">
+                <div class="center-text mb-30">
+                    <div class="ïmg-200x mlr-auto pos-relative"><img src="~/images/nintendo_switch_logo.jpg" alt=""></div>
+                    <h5 class="mt-20">Nintendo Switch</h5>
+
+                </div><!--text-center-->
+            </div><!-- col-md-3 -->
+            <div class="col-lg-3 col-md-4  col-sm-6 ">
+                <div class="center-text mb-30">
+                    <div class="ïmg-200x mlr-auto pos-relative"><img src="~/images/Xbox-Logo-2012.jpg" alt=""></div>
+                    <h5 class="mt-20">Xbox</h5>
+                </div><!--text-center-->
+            </div><!-- col-md-3 -->
+        </div><!-- row-->
+    </div><!-- container -->
+
+
+</section>
+<section class="story-area bg-seller color-white pos-relative">
+    <div class="pos-bottom triangle-up"></div>
+    <div class="pos-top triangle-bottom"></div>
+    <div class="container">
+        <h4 class="font-30 font-sm-20  center-text mb-25"> Nuestros <b> Juegos </b> Para tu disfrute</h4>
+    </div><!-- container -->
+</section>
+
+<section class="color-green"></section>
+<section class="story-area left-text center-sm-text">
+    <div class="container">
+
+        <div class="row">
+            @foreach (var producto in Model.Take(4).OrderBy(r => Guid.NewGuid()))
+            {
+                <div class="col-lg-3 col-md-4  col-sm-6 ">
+                    <div class="center-text mb-30">
+                        <div class="ïmg-200x mlr-auto pos-relative">
+                            <h6 class="ribbon-cont color-white"> <div class="ribbon primary"></div></h6>
+                            <img src="@(ViewBag.adminWebsiteUrl + producto.UrlImagen)" alt="">
+                        </div>
+                        <h5 class="mt-20">@producto.Descripcion</h5>
+                        <h4 class="mt-5 color-primary"><b>$ @producto.Precio</b></h4>
+
+                    </div><!--text-center-->
+                </div><!-- col-md-3 -->
+
+            }
+        </div><!-- row-->
+    </div><!-- container -->
+</section>
+<section class="bg-lite-blue">
+    <div class="container">
+        <div class="row">
+            @foreach (var producto in Model)
+            {
+                <div class="col-md-6">
+                    <div class="sided-90x mb-30 ">
+                        <div class="s-left"><img class="br-3" src="@(ViewBag.adminWebsiteUrl + producto.UrlImagen)" alt="Menu Image"></div><!--s-left-->
+                        <div class="s-right">
+                            <h5 class="mb-10"><b> @producto.Descripcion</b><b class="color-primary float-right">$ @producto.Precio</b></h5>
+                            <p class="pr-70">Los mejores Juegos y precios</p>
+                        </div><!--s-right-->
+                    </div><!-- sided-90x -->
+                </div><!-- food-menu -->
+            }
+
+        </div><!-- row -->
+    </div><!-- container -->
+</section>
+
+<section class="story-area bg-seller color-white pos-relative">
+    <div class="pos-bottom triangle-up"></div>
+    <div class="pos-top triangle-bottom"></div>
+    <div class="container">
+        <h4 class="font-30 font-sm-20  center-text mb-25">Lo  Mas<b> Vendido </b> y lo mejor</h4>
+    </div><!-- container -->
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-6">
+                <div class="sided-220x responsive mb-30 left-text center-sm-text">
+                    <div class="s-left mlr-sm-auto"><img src="~/images/Funko-POP-Games-Pokemon-Pikachu-18-in-Vinyl-Figure.jpg" alt="Image"></div>
+                    <div class="s-right">
+                        <h5>Funko Pop de Pikachu</h5>
+                    </div><!--s-right-->
+                </div><!-- sided-90x -->
+            </div><!-- col-md-6 -->
+            <div class="col-md-12 col-lg-6">
+                <div class="sided-220x responsive mb-30 left-text center-sm-text">
+                    <div class="s-left mlr-sm-auto"><img src="~/images/Logitech-G-PRO-X-Gaming-Headset---League-of-Legends.jpg" alt="Image"></div>
+                    <div class="s-right">
+                        <h5>Audifonos Logitech G-Pro</h5>
+                    </div><!--s-right-->
+                </div><!-- sided-90x -->
+            </div><!--col-md-6 -->
+        </div><!-- row-->
+        <div class="brder-t-light mt-sm-10 mb-60 mb-sm-40"></div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="sided-90x mb-30">
+                    <div class="s-left"><img class="br-3" src="~/images/Sony-DualSense-Wireless-Controller-for-PlayStation-5.jpg" alt="Image"></div><!--s-left-->
+                    <div class="s-right">
+                        <h5 class="mb-10"><b>Mando Inalambrico de PlayStation 5</b></h5>
+                    </div><!--s-right-->
+                </div><!-- sided-90x -->
+            </div><!-- food-menu -->
+            <div class="col-md-6">
+                <div class="sided-90x mb-30 ">
+                    <div class="s-left"><img class="br-3" src="~/images/Microsoft-Xbox-Series-S-Digital-Edition.jpg" alt="Menu Image"></div><!--s-left-->
+                    <div class="s-right">
+                        <h5 class="mb-10"><b>Xbox Serie s</b></h5>
+                    </div><!--s-right-->
+                </div><!-- sided-90x -->
+            </div><!-- food-menu -->
+
+        </div><!-- row -->
+    </div><!-- container -->
+</section>
+
 

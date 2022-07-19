@@ -9,7 +9,7 @@ namespace GameStop.BL
    public class Orden
     {
         public int Id { get; set; }
-        public int ClienteId { get; set; }
+        public double ClienteId { get; set; }
         public Cliente Cliente { get; set; }
         public DateTime Fecha { get; set; }
         public double Total { get; set; }
